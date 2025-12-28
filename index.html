@@ -3,601 +3,1211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A modern, high-performance website with clean design and SEO optimization. Professional solutions for your business.">
-    <meta name="keywords" content="web development, UI/UX design, responsive website, SEO optimization">
-    <meta name="author" content="Your Company Name">
-    <meta property="og:title" content="Modern Web Solutions | Professional Design & Development">
-    <meta property="og:description" content="Creating high-performance, SEO-optimized websites with modern design principles.">
-    <meta property="og:type" content="website">
-    
-    <title>NexusWeb | Modern Web Solutions</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>AI Tools Hub | Top AI Tools for Productivity & Earning</title>
+    <meta name="description" content="Discover the top AI tools in 2025. Learn how to use AI tools effectively and explore ways to earn money with AI through freelancing, automation, and digital products.">
+    <meta name="keywords" content="AI tools, artificial intelligence, ChatGPT, Midjourney, AI for beginners, earn money with AI, AI side hustles">
+    <meta name="author" content="AI Tools Hub">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --dark-bg: #0f172a;
+            --darker-bg: #0a0f1e;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+            --gradient-secondary: linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b);
+            --border-radius: 16px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2.5rem;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        /* Animated Gradient Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .gradient-circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.15;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .circle-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--primary-color);
+            top: -200px;
+            left: -200px;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 500px;
+            height: 500px;
+            background: var(--secondary-color);
+            top: 50%;
+            right: -100px;
+            animation-delay: 5s;
+        }
+
+        .circle-3 {
+            width: 400px;
+            height: 400px;
+            background: var(--accent-color);
+            bottom: -150px;
+            left: 30%;
+            animation-delay: 10s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(30px) rotate(240deg);
+            }
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .logo-text span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* AdSense Placeholders */
+        .ad-container {
+            margin: 40px 0;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .ad-label {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .ad-placeholder {
+            width: 100%;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .ad-placeholder-large {
+            height: 250px;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        /* AI Tools Section */
+        .ai-tools {
+            padding: 100px 0;
+        }
+
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tool-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .tool-category {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent-color);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .tool-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .tool-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .tool-features li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .tool-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .tool-link {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .tool-link:hover {
+            background: rgba(99, 102, 241, 0.2);
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title-center {
+            text-align: center;
+        }
+
+        .section-title-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 i {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            background: rgba(30, 41, 59, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            transition: max-height 0.5s ease, padding 0.5s ease;
+        }
+
+        .faq-answer p {
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        .faq-item.active .faq-question {
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            padding: 70px 0 30px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--text-secondary);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .tools-container {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--darker-bg);
+                padding: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .tools-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .glass-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">
-                    <span class="logo-text">Nexus<span class="logo-highlight">Web</span></span>
-                </a>
-                
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+    <!-- Animated Gradient Background -->
+    <div class="animated-bg">
+        <div class="gradient-circle circle-1"></div>
+        <div class="gradient-circle circle-2"></div>
+        <div class="gradient-circle circle-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-robot"></i></div>
+                <div class="logo-text">AI Tools <span>Hub</span></div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tools">Top AI Tools</a></li>
+                    <li><a href="#applications">AI Applications</a></li>
+                    <li><a href="#earn">Earn with AI</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-                
-                <div class="nav-actions">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <div class="hamburger" id="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </div>
             </nav>
         </div>
     </header>
 
+    <!-- AdSense Header Placeholder -->
+    <div class="container ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-placeholder">Google AdSense - Leaderboard (728x90)</div>
+    </div>
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title animate-fade-up">Build Modern, High-Performance Websites</h1>
-                <p class="hero-subtitle animate-fade-up" style="animation-delay: 0.2s;">Professional web solutions with clean design, SEO optimization, and blazing-fast performance for your business success.</p>
-                <div class="hero-buttons animate-fade-up" style="animation-delay: 0.4s;">
-                    <a href="#contact" class="btn btn-primary btn-large">Start Free Trial</a>
-                    <a href="#features" class="btn btn-secondary btn-large">
-                        <i class="fas fa-play-circle"></i> Watch Demo
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image animate-fade-up" style="animation-delay: 0.6s;">
-                <div class="hero-visual">
-                    <div class="floating-element"></div>
-                    <div class="floating-element"></div>
-                    <div class="floating-element"></div>
-                </div>
+            <h1>Master AI Tools in 2025</h1>
+            <p>Discover the most powerful AI tools transforming industries today. Learn step-by-step how to use them effectively and explore practical ways to earn money through AI-powered freelancing, automation, and digital products.</p>
+            <div class="cta-buttons">
+                <a href="#tools" class="btn btn-primary">Explore Top AI Tools</a>
+                <a href="#earn" class="btn btn-secondary">Learn to Earn with AI</a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
+    <!-- Top 10 AI Tools Section -->
+    <section class="ai-tools" id="tools">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Powerful Features</h2>
-                <p class="section-subtitle">Everything you need to build modern, high-performance websites</p>
-            </div>
+            <h2 class="section-title-center">Top 10 AI Tools in 2025</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px; color: var(--text-secondary);">These cutting-edge AI tools are transforming how we work, create, and solve problems across industries.</p>
             
-            <div class="features-grid">
-                <div class="feature-card animate-fade-up">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="feature-title">Fast Performance</h3>
-                    <p class="feature-description">Optimized for speed with minimal load times and smooth animations.</p>
-                </div>
-                
-                <div class="feature-card animate-fade-up" style="animation-delay: 0.1s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Fully Responsive</h3>
-                    <p class="feature-description">Looks perfect on all devices from mobile to desktop screens.</p>
-                </div>
-                
-                <div class="feature-card animate-fade-up" style="animation-delay: 0.2s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="feature-title">SEO Optimized</h3>
-                    <p class="feature-description">Built with best practices to rank higher in search results.</p>
-                </div>
-                
-                <div class="feature-card animate-fade-up" style="animation-delay: 0.3s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="feature-title">Secure & Reliable</h3>
-                    <p class="feature-description">Enterprise-grade security with 99.9% uptime guarantee.</p>
-                </div>
-                
-                <div class="feature-card animate-fade-up" style="animation-delay: 0.4s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="feature-title">Clean Code</h3>
-                    <p class="feature-description">Well-documented, maintainable code that's easy to scale.</p>
-                </div>
-                
-                <div class="feature-card animate-fade-up" style="animation-delay: 0.5s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="feature-title">Modern Design</h3>
-                    <p class="feature-description">Beautiful UI/UX with attention to detail and user experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Why Choose NexusWeb?</h2>
-                    <p class="about-description">
-                        We create modern, high-performance websites that not only look stunning but also deliver exceptional results. Our focus is on clean design, user experience, and technical excellence.
-                    </p>
-                    <p class="about-description">
-                        With a team of experienced full-stack developers and UI/UX designers, we build solutions that are scalable, maintainable, and optimized for performance and SEO.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3 class="stat-number">99%</h3>
-                            <p class="stat-label">Client Satisfaction</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="stat-number">500+</h3>
-                            <p class="stat-label">Projects Delivered</p>
-                        </div>
-                        <div class="stat">
-                            <h3 class="stat-number">50+</h3>
-                            <p class="stat-label">Team Members</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Comprehensive solutions for your digital presence</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">Custom, responsive websites built with modern technologies and best practices.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3 class="service-title">UI/UX Design</h3>
-                    <p class="service-description">User-centered design that enhances engagement and drives conversions.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-image">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="service-title">SEO Optimization</h3>
-                    <p class="service-description">Improve your search engine rankings and drive organic traffic to your site.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">Trusted by businesses worldwide</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"NexusWeb transformed our online presence. Our website traffic increased by 300% after the redesign!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SJ</div>
-                        <div class="author-info">
-                            <h4 class="author-name">Sarah Johnson</h4>
-                            <p class="author-role">Marketing Director, TechCorp</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="testimonial-text">"The team delivered beyond our expectations. The website performance is incredible."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
-                        <div class="author-info">
-                            <h4 class="author-name">Michael Rodriguez</h4>
-                            <p class="author-role">CEO, StartupXYZ</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Professional, timely, and high-quality work. Our new website has significantly improved conversions."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">EC</div>
-                        <div class="author-info">
-                            <h4 class="author-name">Emma Chen</h4>
-                            <p class="author-role">Product Manager, InnovateCo</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Insights</h2>
-                <p class="section-subtitle">Stay updated with web development trends and tips</p>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">Web Performance</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">10 Ways to Improve Website Loading Speed</h3>
-                        <p class="blog-excerpt">Learn essential techniques to optimize your website for faster load times and better user experience.</p>
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="far fa-calendar"></i> Oct 15, 2023</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
-                        </div>
-                        <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">SEO</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">SEO Best Practices for 2024</h3>
-                        <p class="blog-excerpt">Stay ahead with the latest SEO strategies to improve your search engine rankings and organic traffic.</p>
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="far fa-calendar"></i> Oct 10, 2023</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 7 min read</span>
-                        </div>
-                        <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="blog-category">UI/UX Design</div>
-                    </div>
-                    <div class="blog-content">
-                        <h3 class="blog-title">The Psychology of Color in Web Design</h3>
-                        <p class="blog-excerpt">How color choices impact user behavior and conversion rates in modern web design.</p>
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="far fa-calendar"></i> Oct 5, 2023</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
-                        </div>
-                        <a href="#" class="btn btn-text">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-            
-            <div class="text-center">
-                <a href="#" class="btn btn-primary">View All Articles</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Choose the plan that's right for your business</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Starter</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">29</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <p class="pricing-description">Perfect for small businesses</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Responsive Website</li>
-                        <li><i class="fas fa-check"></i> 5 Pages</li>
-                        <li><i class="fas fa-check"></i> Basic SEO</li>
-                        <li><i class="fas fa-times"></i> E-commerce</li>
-                        <li><i class="fas fa-times"></i> Premium Support</li>
+            <div class="tools-container">
+                <!-- Tool 1 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">1</div>
+                    <div class="tool-icon"><i class="fas fa-comment-dots"></i></div>
+                    <div class="tool-category">Writing & Content</div>
+                    <h3>ChatGPT-5</h3>
+                    <p class="tool-description">Advanced conversational AI for writing, coding, analysis, and problem-solving with enhanced reasoning capabilities.</p>
+                    <ul class="tool-features">
+                        <li>Natural conversation and complex task handling</li>
+                        <li>Code generation and debugging</li>
+                        <li>Content creation and editing</li>
                     </ul>
-                    <a href="#" class="btn btn-outline btn-block">Get Started</a>
+                    <p><strong>Industries:</strong> Marketing, Education, Software Development, Customer Service</p>
+                    <p><strong>Earning Potential:</strong> Freelance writing, AI consultation, content automation services, chatbot development</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
                 </div>
                 
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Professional</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">79</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <p class="pricing-description">Ideal for growing businesses</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Starter</li>
-                        <li><i class="fas fa-check"></i> 15 Pages</li>
-                        <li><i class="fas fa-check"></i> Advanced SEO</li>
-                        <li><i class="fas fa-check"></i> E-commerce Ready</li>
-                        <li><i class="fas fa-times"></i> Premium Support</li>
+                <!-- Tool 2 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">2</div>
+                    <div class="tool-icon"><i class="fas fa-image"></i></div>
+                    <div class="tool-category">Visual Design</div>
+                    <h3>Midjourney v6</h3>
+                    <p class="tool-description">State-of-the-art AI image generator creating photorealistic and artistic visuals from text descriptions.</p>
+                    <ul class="tool-features">
+                        <li>Photorealistic image generation</li>
+                        <li>Artistic style replication</li>
+                        <li>Commercial use rights</li>
                     </ul>
-                    <a href="#" class="btn btn-primary btn-block">Get Started</a>
+                    <p><strong>Industries:</strong> Marketing, Entertainment, Gaming, E-commerce, Advertising</p>
+                    <p><strong>Earning Potential:</strong> Digital art sales, stock photography, book covers, social media content</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
                 </div>
                 
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-title">Enterprise</h3>
-                        <div class="pricing-price">
-                            <span class="price-currency">$</span>
-                            <span class="price-amount">199</span>
-                            <span class="price-period">/month</span>
-                        </div>
-                        <p class="pricing-description">For large organizations</p>
-                    </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Professional</li>
-                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
-                        <li><i class="fas fa-check"></i> Premium SEO</li>
-                        <li><i class="fas fa-check"></i> Full E-commerce</li>
-                        <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
+                <!-- Tool 3 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">3</div>
+                    <div class="tool-icon"><i class="fas fa-video"></i></div>
+                    <div class="tool-category">Video Creation</div>
+                    <h3>Runway ML</h3>
+                    <p class="tool-description">Complete AI video editing suite with text-to-video, object removal, style transfer, and motion tracking.</p>
+                    <ul class="tool-features">
+                        <li>Text-to-video generation</li>
+                        <li>AI-powered video editing</li>
+                        <li>Special effects and filters</li>
                     </ul>
-                    <a href="#" class="btn btn-outline btn-block">Contact Sales</a>
+                    <p><strong>Industries:</strong> Film Production, Marketing, Education, Social Media</p>
+                    <p><strong>Earning Potential:</strong> Video editing services, YouTube content creation, commercial video production</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+                
+                <!-- Tool 4 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">4</div>
+                    <div class="tool-icon"><i class="fas fa-music"></i></div>
+                    <div class="tool-category">Audio Production</div>
+                    <h3>Murf AI</h3>
+                    <p class="tool-description">Professional text-to-speech platform with 120+ realistic voices in 20+ languages for voiceovers and narration.</p>
+                    <ul class="tool-features">
+                        <li>Realistic voice generation</li>
+                        <li>Emotion and tone control</li>
+                        <li>Commercial licensing available</li>
+                    </ul>
+                    <p><strong>Industries:</strong> Content Creation, E-learning, Audiobooks, Advertising</p>
+                    <p><strong>Earning Potential:</strong> Voiceover services, audiobook narration, podcast production, YouTube videos</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+                
+                <!-- Tool 5 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">5</div>
+                    <div class="tool-icon"><i class="fas fa-code"></i></div>
+                    <div class="tool-category">Development</div>
+                    <h3>GitHub Copilot X</h3>
+                    <p class="tool-description">AI-powered coding assistant that suggests code, completes functions, and helps debug in real-time.</p>
+                    <ul class="tool-features">
+                        <li>Context-aware code suggestions</li>
+                        <li>Multi-language support</li>
+                        <li>Integration with popular IDEs</li>
+                    </ul>
+                    <p><strong>Industries:</strong> Software Development, Web Development, App Development</p>
+                    <p><strong>Earning Potential:</strong> Freelance development, app creation, coding tutorials, SaaS products</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+                
+                <!-- Tool 6 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">6</div>
+                    <div class="tool-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="tool-category">Data & Analytics</div>
+                    <h3>Tableau AI</h3>
+                    <p class="tool-description">Intelligent data visualization platform that automatically generates insights and predictive analytics.</p>
+                    <ul class="tool-features">
+                        <li>Automated data analysis</li>
+                        <li>Natural language queries</li>
+                        <li>Predictive modeling</li>
+                    </ul>
+                    <p><strong>Industries:</strong> Finance, Healthcare, Retail, Marketing Analytics</p>
+                    <p><strong>Earning Potential:</strong> Data analysis services, business intelligence consulting, report generation</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+            </div>
+            
+            <!-- AdSense In-Content Placeholder -->
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder ad-placeholder-large">Google AdSense - Medium Rectangle (300x250)</div>
+            </div>
+            
+            <div class="tools-container" style="margin-top: 40px;">
+                <!-- Tool 7 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">7</div>
+                    <div class="tool-icon"><i class="fas fa-search"></i></div>
+                    <div class="tool-category">Research & Analysis</div>
+                    <h3>Consensus AI</h3>
+                    <p class="tool-description">Research assistant that uses AI to search, analyze, and summarize scientific papers and academic research.</p>
+                    <ul class="tool-features">
+                        <li>Scientific paper analysis</li>
+                        <li>Evidence-based answers</li>
+                        <li>Citation generation</li>
+                    </ul>
+                    <p><strong>Industries:</strong> Academia, Pharmaceuticals, Market Research, Journalism</p>
+                    <p><strong>Earning Potential:</strong> Research services, academic writing, market analysis reports</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+                
+                <!-- Tool 8 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">8</div>
+                    <div class="tool-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="tool-category">E-commerce</div>
+                    <h3>Jasper Commerce</h3>
+                    <p class="tool-description">AI-powered platform for e-commerce product descriptions, marketing copy, and customer service automation.</p>
+                    <ul class="tool-features">
+                        <li>Product description generation</li>
+                        <li>Personalized marketing copy</li>
+                        <li>Customer review analysis</li>
+                    </ul>
+                    <p><strong>Industries:</strong> E-commerce, Retail, Dropshipping, Marketing</p>
+                    <p><strong>Earning Potential:</strong> E-commerce store management, product description services, Amazon FBA assistance</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+                
+                <!-- Tool 9 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">9</div>
+                    <div class="tool-icon"><i class="fas fa-language"></i></div>
+                    <div class="tool-category">Translation</div>
+                    <h3>DeepL Pro</h3>
+                    <p class="tool-description">Advanced neural machine translation supporting 30+ languages with context-aware accuracy.</p>
+                    <ul class="tool-features">
+                        <li>Context-aware translation</li>
+                        <li>Document format preservation</li>
+                        <li>API for developers</li>
+                    </ul>
+                    <p><strong>Industries:</strong> Publishing, International Business, Tourism, Content Localization</p>
+                    <p><strong>Earning Potential:</strong> Translation services, multilingual content creation, localization consulting</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+                
+                <!-- Tool 10 -->
+                <div class="glass-card tool-card">
+                    <div class="tool-number">10</div>
+                    <div class="tool-icon"><i class="fas fa-brain"></i></div>
+                    <div class="tool-category">Automation</div>
+                    <h3>Zapier AI</h3>
+                    <p class="tool-description">Intelligent workflow automation that connects apps and services with AI-powered decision making.</p>
+                    <ul class="tool-features">
+                        <li>5,000+ app integrations</li>
+                        <li>AI-powered workflow suggestions</li>
+                        <li>No-code automation builder</li>
+                    </ul>
+                    <p><strong>Industries:</strong> All industries for process automation</p>
+                    <p><strong>Earning Potential:</strong> Automation consulting, workflow optimization services, SaaS integration</p>
+                    <a href="#" class="tool-link">Learn Step-by-Step Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How AI Is Helping Today Section -->
+    <section class="section" id="applications" style="background: rgba(15, 23, 42, 0.5);">
+        <div class="container">
+            <h2 class="section-title-center">How AI Is Helping Today</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 50px; color: var(--text-secondary);">Artificial intelligence is transforming industries and solving real-world problems in ways previously unimaginable.</p>
+            
+            <div class="info-cards">
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-stethoscope"></i> Healthcare Revolution</h3>
+                    <p>AI algorithms analyze medical images with higher accuracy than human doctors, detect diseases earlier, and assist in drug discovery and personalized treatment plans.</p>
+                    <p><strong>Example:</strong> AI systems can detect early-stage cancer from scans with 95% accuracy, significantly improving survival rates.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-leaf"></i> Climate Solutions</h3>
+                    <p>AI optimizes energy consumption in smart grids, predicts climate patterns, monitors deforestation via satellite imagery, and develops sustainable materials.</p>
+                    <p><strong>Example:</strong> Google's DeepMind reduced energy consumption in data centers by 40% using AI optimization.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Education Personalization</h3>
+                    <p>AI tutors provide personalized learning paths, adapt content to individual student needs, and help educators identify students who need extra support.</p>
+                    <p><strong>Example:</strong> Khan Academy's AI tutor provides customized practice problems based on each student's learning pace and gaps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Earn Money Using AI Section -->
+    <section class="section" id="earn">
+        <div class="container">
+            <h2 class="section-title-center">How to Earn Money Using AI</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 50px; color: var(--text-secondary);">AI tools are creating new income opportunities for individuals worldwide. Here are proven ways to monetize AI skills.</p>
+            
+            <div class="info-cards">
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-pen-fancy"></i> Freelance AI Services</h3>
+                    <p>Offer specialized services like AI-generated content, custom chatbots, data analysis, or image generation on platforms like Upwork and Fiverr.</p>
+                    <p><strong>Earning Potential:</strong> $30-$150 per hour depending on specialization.</p>
+                    <p><strong>Beginner Tip:</strong> Start with simple AI content creation services and expand your offerings as you gain experience.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-store"></i> Digital Products</h3>
+                    <p>Create and sell AI-generated ebooks, stock images, templates, plugins, or courses on platforms like Gumroad, Etsy, or your own website.</p>
+                    <p><strong>Earning Potential:</strong> Passive income ranging from $100 to $10,000+ per month.</p>
+                    <p><strong>Beginner Tip:</strong> Use Midjourney to create unique digital art or ChatGPT to write short ebooks on niche topics.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-robot"></i> AI Automation Agency</h3>
+                    <p>Help businesses automate repetitive tasks using AI tools like Zapier, ChatGPT API, or custom automation scripts.</p>
+                    <p><strong>Earning Potential:</strong> $500-$5,000 per client for setup plus monthly maintenance fees.</p>
+                    <p><strong>Beginner Tip:</strong> Start by automating your own tasks, then offer the same solutions to small businesses in your network.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-link"></i> Affiliate Marketing</h3>
+                    <p>Promote AI tools through reviews, tutorials, and comparison content. Earn commissions when readers sign up through your links.</p>
+                    <p><strong>Earning Potential:</strong> $100-$10,000+ per month depending on traffic and conversion rates.</p>
+                    <p><strong>Beginner Tip:</strong> Create detailed comparison articles like "ChatGPT vs. Claude vs. Bard" with your affiliate links.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-chart-bar"></i> AI Trading & Investing</h3>
+                    <p>Use AI-powered analysis tools to inform stock, cryptocurrency, or forex trading decisions (with appropriate risk management).</p>
+                    <p><strong>Earning Potential:</strong> Variable, but AI tools can significantly improve decision-making accuracy.</p>
+                    <p><strong>Beginner Tip:</strong> Start with paper trading using AI analysis tools before investing real money.</p>
+                </div>
+                
+                <div class="glass-card info-card">
+                    <h3><i class="fas fa-youtube"></i> AI Content Creation</h3>
+                    <p>Grow YouTube channels, blogs, or social media accounts using AI for scripting, editing, and content planning, then monetize through ads or sponsorships.</p>
+                    <p><strong>Earning Potential:</strong> $100-$50,000+ per month depending on audience size and niche.</p>
+                    <p><strong>Beginner Tip:</strong> Use AI tools to consistently produce quality content faster than competitors.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq section">
+    <section class="section" id="faq" style="background: rgba(15, 23, 42, 0.5);">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions about our services</p>
-            </div>
+            <h2 class="section-title-center">Frequently Asked Questions</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 50px; color: var(--text-secondary);">Get answers to common questions about AI tools and how to start using them effectively.</p>
             
-            <div class="faq-list">
+            <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>How long does it take to build a website?</span>
+                        Do I need technical skills to use AI tools?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Typically, a standard website takes 2-4 weeks from initial concept to launch. Complex projects with custom features may take longer. We provide a detailed timeline during our initial consultation.</p>
+                        <p>Most modern AI tools are designed with user-friendly interfaces that require no coding or technical expertise. Tools like ChatGPT, Midjourney, and Canva's AI features use simple text prompts or drag-and-drop interfaces. However, learning some basic prompt engineering techniques will help you get better results.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Do you provide ongoing maintenance and support?</span>
+                        Are AI tools expensive to use?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, we offer various maintenance plans to keep your website secure, updated, and performing optimally. This includes security updates, backups, performance monitoring, and content updates.</p>
+                        <p>Many AI tools offer free tiers with limited functionality, which are perfect for beginners. Paid plans typically range from $10 to $100 per month, offering more features and higher usage limits. When used for business or earning purposes, the ROI usually justifies the cost.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Is SEO included in your web development packages?</span>
+                        Can I really earn money with AI as a beginner?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, all our websites are built with SEO best practices. We offer additional SEO services for ongoing optimization, keyword research, and performance tracking to help you rank higher in search results.</p>
+                        <p>Yes! Many beginners start by offering simple AI-powered services like content writing, image creation, or data organization. The key is to start with one tool, master it, and offer your services on freelance platforms. As you gain experience, you can expand to more complex and higher-paying AI services.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Can I update the website content myself?</span>
+                        Which AI tool should I start with as a complete beginner?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely! We can build your website with a user-friendly Content Management System (CMS) that allows you to easily update text, images, and blog posts without any technical knowledge.</p>
+                        <p>ChatGPT is the most versatile and beginner-friendly AI tool to start with. It can help with writing, brainstorming, learning, and problem-solving. After getting comfortable with ChatGPT, try Midjourney for image generation or Canva's AI features for design work.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>What technologies do you use?</span>
+                        Will AI tools replace human jobs?
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>We use modern technologies including HTML5, CSS3, JavaScript (ES6+), React, and various backend technologies based on project requirements. All our websites are responsive and optimized for performance.</p>
+                        <p>AI is transforming jobs rather than replacing them entirely. While some routine tasks may be automated, AI tools primarily augment human capabilities, making workers more productive and creating new job categories like AI trainers, prompt engineers, and AI ethicists.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="contact-description">Ready to start your project? Contact us today for a free consultation.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Our Location</h4>
-                                <p>123 Web Street, Digital City</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Phone Number</h4>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Email Address</h4>
-                                <p>hello@nexusweb.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="Enter your email">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <span class="logo-text">Nexus<span class="logo-highlight">Web</span></span>
-                    </a>
-                    <p class="footer-description">Creating modern, high-performance websites with clean design and SEO optimization for business success.</p>
+                <div class="footer-column">
+                    <h4>AI Tools Hub</h4>
+                    <p>Your trusted guide to AI tools and how to use them effectively for productivity and earning.</p>
+                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                        <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-discord"></i></a>
+                    </div>
                 </div>
                 
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-title">Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Services</h4>
-                        <ul>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">UI/UX Design</a></li>
-                            <li><a href="#">SEO Optimization</a></li>
-                            <li><a href="#">Performance Audit</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Legal</h4>
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                            <li><a href="#">Cookie Policy</a></li>
-                            <li><a href="#">GDPR Compliance</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#tools">Top AI Tools</a></li>
+                        <li><a href="#applications">AI Applications</a></li>
+                        <li><a href="#earn">Earn with AI</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@aitoolshub.com">contact@aitoolshub.com</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Form</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2023 NexusWeb. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Sitemap</a>
-                    <a href="#">Accessibility</a>
-                    <a href="#">Careers</a>
-                </div>
+            <!-- AdSense Footer Placeholder -->
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder">Google AdSense - Footer Banner (728x90)</div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 AI Tools Hub. All rights reserved. | This site contains affiliate links. We may earn a commission when you make a purchase through our links.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">AI Tools Hub is an independent educational resource and is not officially affiliated with any AI tool companies mentioned.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add subtle animation to cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe tool cards
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+        
+        // Observe info cards
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
