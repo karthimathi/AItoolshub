@@ -23,6 +23,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         :root {
@@ -74,6 +75,10 @@
         html {
             scroll-behavior: smooth;
             font-size: 16px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         body {
@@ -84,6 +89,15 @@
             min-height: 100vh;
             overflow-x: hidden;
             background-attachment: fixed;
+            cursor: default;
+        }
+
+        /* Prevent any text selection */
+        h1, h2, h3, p, li, .hero-title, .hero-subtitle, .section-title, .subsection-title {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
         }
 
         /* ===== CONTAINER & LAYOUT ===== */
@@ -132,6 +146,7 @@
             color: transparent;
             letter-spacing: -0.02em;
             max-width: 900px;
+            pointer-events: none;
         }
 
         .hero-subtitle {
@@ -141,6 +156,7 @@
             margin: 0 auto 3rem;
             font-weight: 300;
             line-height: 1.4;
+            pointer-events: none;
         }
 
         /* ===== GLASSMORPHISM CARDS ===== */
@@ -156,6 +172,7 @@
             transition: var(--transition-smooth);
             position: relative;
             overflow: hidden;
+            cursor: default;
         }
 
         .section-card::before {
@@ -183,6 +200,7 @@
             color: var(--accent-primary);
             position: relative;
             display: inline-block;
+            pointer-events: none;
         }
 
         .section-title::before {
@@ -207,6 +225,7 @@
             color: var(--accent-secondary);
             position: relative;
             padding-left: 1.8rem;
+            pointer-events: none;
         }
 
         .subsection-title::before {
@@ -265,6 +284,7 @@
             padding: 2rem;
             margin: 2.5rem 0;
             position: relative;
+            cursor: default;
         }
 
         .workflow-step {
@@ -272,6 +292,7 @@
             align-items: center;
             margin: 1.5rem 0;
             position: relative;
+            pointer-events: none;
         }
 
         .step-number {
@@ -328,6 +349,7 @@
             border: 1px solid rgba(249, 115, 22, 0.2);
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            cursor: default;
         }
 
         /* ===== ANIMATIONS ===== */
@@ -359,12 +381,15 @@
             opacity: 0;
             animation: fadeUp 0.8s ease forwards;
             animation-delay: 0.2s;
+            cursor: default;
+            pointer-events: none;
         }
 
         .section-card {
             opacity: 0;
             animation: slideIn 0.8s ease forwards;
             animation-delay: 0.4s;
+            pointer-events: auto;
         }
 
         /* Hero animations */
@@ -399,6 +424,7 @@
             margin-top: 4rem;
             font-size: var(--font-size-sm);
             line-height: 1.6;
+            cursor: default;
         }
 
         footer p {
@@ -583,7 +609,7 @@
 
         <main>
             <!-- Section 1: Introduction -->
-            <section id="introduction">
+            <section>
                 <h2 class="section-title">Introduction to Zapier AI</h2>
                 <div class="section-card">
                     <p><span class="highlight">Zapier AI</span> represents the evolution of automation technology, combining Zapier's industry-leading workflow automation platform with advanced artificial intelligence capabilities. This powerful integration enables users to create intelligent, adaptive, and context-aware automations that go beyond simple "if-this-then-that" rules.</p>
@@ -617,7 +643,7 @@
             </section>
 
             <!-- Section 2: How to Use -->
-            <section id="how-to-use">
+            <section>
                 <h2 class="section-title">How to Use Zapier AI</h2>
                 <div class="section-card">
                     <h3 class="subsection-title">Getting Started with Zap Templates</h3>
@@ -647,7 +673,7 @@
             </section>
 
             <!-- Section 3: Applications -->
-            <section id="applications">
+            <section>
                 <h2 class="section-title">Applications You Can Develop Using Zapier AI</h2>
                 <div class="section-card">
                     <h3 class="subsection-title">Business Process Automation</h3>
@@ -689,7 +715,7 @@
             </section>
 
             <!-- Section 4: Make Money -->
-            <section id="make-money">
+            <section>
                 <h2 class="section-title">How to Make Money with Zapier AI</h2>
                 <div class="section-card">
                     <div class="skill-level">Automation Services</div>
@@ -731,7 +757,7 @@
             </section>
 
             <!-- Section 5: Learning Guide -->
-            <section id="learning-guide">
+            <section>
                 <h2 class="section-title">Zapier AI Learning Guide (Beginner to Advanced)</h2>
                 <div class="section-card">
                     <div class="skill-level">Beginner Level: Fundamentals</div>
@@ -767,7 +793,7 @@
             </section>
 
             <!-- Section 6: Advantages -->
-            <section id="advantages">
+            <section>
                 <h2 class="section-title">Advantages of Zapier AI</h2>
                 <div class="section-card">
                     <ul>
@@ -786,7 +812,7 @@
             </section>
 
             <!-- Section 7: Future -->
-            <section id="future">
+            <section>
                 <h2 class="section-title">Future of Zapier AI</h2>
                 <div class="section-card">
                     <p>The evolution of Zapier AI points toward increasingly intelligent, autonomous, and predictive automation capabilities that will transform how businesses operate:</p>
