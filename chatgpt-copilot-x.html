@@ -56,7 +56,7 @@
         }
 
         body {
-            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace, sans-serif;
             background: var(--gradient-bg);
             color: var(--text-primary);
             line-height: 1.7;
@@ -165,6 +165,13 @@
             animation: fadeUp 1.2s ease 0.3s forwards;
         }
 
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .hero-typewriter {
             font-family: 'SF Mono', monospace;
             font-size: 1.2rem;
@@ -196,11 +203,11 @@
         section {
             margin-bottom: var(--section-spacing);
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(40px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        section.animate-in {
+        section.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -229,7 +236,7 @@
             left: 0;
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan);
             border-radius: 2px;
         }
 
@@ -265,7 +272,8 @@
             position: relative;
             overflow: hidden;
             opacity: 0;
-            transform: translateX(-30px);
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             border-left: 4px solid var(--accent-green);
         }
 
@@ -281,6 +289,11 @@
             transition: opacity 0.3s ease;
         }
 
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .card:hover {
             transform: translateY(-8px);
             border-color: rgba(0, 255, 157, 0.3);
@@ -289,17 +302,6 @@
 
         .card:hover::before {
             opacity: 1;
-        }
-
-        .card.animate-in {
-            animation: slideIn 0.8s ease forwards;
-        }
-
-        @keyframes slideIn {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
         }
 
         /* ===== CODE BLOCK STYLING ===== */
@@ -529,14 +531,6 @@
             50% { transform: translateY(15px); opacity: 1; }
         }
 
-        /* ===== ANIMATION UTILITIES ===== */
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* ===== FOOTER ===== */
         footer {
             text-align: center;
@@ -572,6 +566,16 @@
             .terminal-line,
             .cursor {
                 animation: none !important;
+            }
+            
+            .card {
+                opacity: 1;
+                transform: none;
+            }
+            
+            section {
+                opacity: 1;
+                transform: none;
             }
         }
     </style>
@@ -841,44 +845,86 @@
         </footer>
     </div>
 
-    <!-- CSS Scroll Animation Implementation -->
-    <style>
-        /* Progressive enhancement for scroll animations */
-        @media (prefers-reduced-motion: no-preference) {
-            @keyframes revealContent {
-                from {
-                    opacity: 0;
-                    transform: translateY(50px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const cards = document.querySelectorAll('.card');
+            
+            // Function to check if element is in viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight - 100) &&
+                    rect.bottom >= 100
+                );
             }
             
-            @keyframes slideContent {
-                from {
-                    opacity: 0;
-                    transform: translateX(-30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
+            // Function to check visibility of all elements
+            function checkVisibility() {
+                sections.forEach(section => {
+                    if (isInViewport(section)) {
+                        section.classList.add('visible');
+                    }
+                });
+                
+                cards.forEach(card => {
+                    if (isInViewport(card)) {
+                        card.classList.add('visible');
+                    }
+                });
             }
             
-            section {
-                animation: revealContent linear;
-                animation-timeline: view();
-                animation-range: entry 0% cover 25%;
-            }
+            // Initial check
+            checkVisibility();
             
-            .card {
-                animation: slideContent linear;
-                animation-timeline: view();
-                animation-range: entry 10% cover 20%;
-            }
-        }
-    </style>
+            // Throttled scroll event listener
+            let isScrolling = false;
+            window.addEventListener('scroll', function() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        checkVisibility();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            });
+            
+            // Check on resize
+            window.addEventListener('resize', checkVisibility);
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add interactive hover effects for cards
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    if (this.classList.contains('visible')) {
+                        this.style.transform = 'translateY(-8px)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    if (this.classList.contains('visible')) {
+                        this.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
